@@ -1,27 +1,93 @@
-.horiz {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 25px 500px;
-}
-.horiz ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
-}
-.horiz ul li a {
-  text-decoration: none;
-  font-size: larger;
-  color: #5E17EB;
-  font-weight: bold;
-}
-.horiz ul li a:hover {
-  color: #956ce7;
-}
 body {
   font-family: 'Nunito', sans-serif;
+  margin: 0;
+  background-color: white;
+  color: black;
 }
 
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: inherit;
+  color: #5E17EB;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #5E17EB;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.nav a:hover {
+  color: #956ce7;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0 40px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2em;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1em;
+}
+ul {
+  padding-left: 10px;
+  list-style-type: square;
+}
+hr {
+  border: none;
+  height: 0.5px; 
+  background-color: #000; 
+  margin: 2em 0;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  padding: 1em;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+  transform: scale(1.03);
+}
