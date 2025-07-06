@@ -7,6 +7,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/images2', express.static(path.join(__dirname, 'images2')));
+app.use('/images3', express.static(path.join(__dirname, 'images3')));
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'views/index.html')));
 app.get('/research.html', (req, res) => res.sendFile(path.join(__dirname, 'views/research.html')));
