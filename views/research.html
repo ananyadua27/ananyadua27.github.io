@@ -10,10 +10,8 @@
 <body>
   <div class="container">
     <header class="navbar">
-      <a href="/" class="navbar-brand">
-        <span class="name">/ananya dua</span>
-      </a>
-      <nav class="nav" aria-label="Main navigation">
+      <a href="/" style="text-decoration: none;"><span class="name">/ananya dua</span></a>
+      <nav class="nav">
         <a href="/research.html">/research 🔬</a>
         <a href="/portfolio.html">/portfolio 💻</a>
         <a href="/travel.html">/travel ✈️</a>
@@ -24,12 +22,10 @@
     <hr />
 
     <main>
-      <section class="intro">
-        <h1 class="center">what I work on</h1>
+        <h1 style="text-align: center;">what I work on</h1>
         <p class="center max-width">
           I develop <strong>robust, ML-powered software systems</strong> combining statistical modeling and signal processing. I design and build scalable data pipelines, simulations, and embedded applications that process complex, noisy real-world data—from biological signals to wireless networks—focusing on <strong>reliability, interpretability, and efficiency in resource-constrained environments.</strong>
         </p>
-      </section>
 
       <section class="research-grid">
         <article class="project">
@@ -62,45 +58,43 @@
           </a>
         </article>
 
+
+        <article class="project">
+          <h2>🗳️ Bluebonnet Data: Distinguishing Young Voters in Watauga County</h2>
+          <p>
+            Supported Ben Massey's NC House campaign by integrating Appalachian State registrar data, VAN files, and public state voter records using SQL. Employed <strong>fuzzy matching</strong> and automated <strong>PDF-to-CSV extraction</strong> to bypass VAN export limits. Developed a <strong>Tableau dashboard</strong> with <strong>ArcGIS mapping</strong> to visualize and enable targeted student voter outreach.
+          </p>
+          <a href="/images3/bluebonnet.png" target="_blank">
+            <img src="/images3/bluebonnet.png" alt="Ben Massey House Campaign" class="project-img" />
+          </a>
+        </article>
+
         <article class="project">
           <h2>🧬 CNN-Based Detection of Macular Degeneration</h2>
           <p>
             Developed a <strong>CNN to detect age-related macular degeneration</strong> from retinal images. Implemented preprocessing with normalization, augmentation, and artifact removal for robustness. Leveraged <strong>transfer learning (ResNet, EfficientNet)</strong>, and addressed class imbalance using weighted loss and oversampling. Collaborated with <strong>University of Cambridge</strong> clinicians to ensure clinical relevance and interpretability. Built using <strong>TensorFlow/Keras</strong> and <strong>OpenCV</strong>.
           </p>
-          <p>
-            <a href="https://arxiv.org/abs/2201.12384" target="_blank">Read the paper on arXiv</a>
-          </p>
         </article>
 
         <article class="project">
-          <h2>🗳️ Bluebonnet Data: Distinguishing Young Voters in Watauga County</h2>
-          <p>
-            Supported the Ben Massey campaign by integrating App State registrar data, VAN files, and state voter records using Python. Employed <strong>fuzzy matching</strong> and automated <strong>PDF-to-CSV extraction</strong> to bypass VAN export limits. Developed a <strong>Tableau dashboard</strong> with <strong>ArcGIS mapping</strong> to visualize and enable targeted student voter outreach.
-        </article>
-
-        <article class="project">
-          <h2>🌙 Detecting Sleep-Wake Cycles & Circadian Instability</h2>
-          <p>
-            Building a signal processing pipeline to detect circadian rhythm disruption from actigraphy data. Extracting rest–activity patterns using <strong>Fourier analysis, smoothing, and instability scoring</strong>. This work aims to enable passive, low-burden monitoring of neurological health from modern consumer wearable sensors.
-          </p>
-        </article>
+        <h2>🌍 Impact Evaluations - World Bank & UC Berkeley Economics</h2>
+        <p>
+          Assessed the cognitive and non-cognitive effects of a <strong>youth chess intervention</strong> in rural schools in <strong>Kenya</strong> using <strong>difference-in-differences regression analysis</strong>, controlling for time and group fixed effects. Second, evaluated Brazil’s <strong>"Minha Casa, Minha Vida"</strong> housing program by integrating a <strong>geolocation API</strong> to delineate precise geographic boundaries, enabling spatially-informed comparisons of pre- and post-intervention economic indicators at the community level.
+        </p>
+    </article>
       </section>
     </main>
 
-    <section class="coursework center max-width">
-      <h1>selected coursework</h1>
+      <h1 style="text-align: center;">selected coursework</h1>
       <p>
         <strong>computer science:</strong> Data Structures & Algorithms · Operating Systems · Machine Learning · Computer Vision · Digital Design · Integrated Circuits · Signal Processing · Communication Networks<br><br>
         <strong>mathematics:</strong> Optimization · Linear Algebra · Discrete Math · Logic · Stochastic Processes · Real Analysis<br><br>
         <strong>statistics:</strong> Statistical Learning & Data Science · Causal Inference · Time Series Analysis · Econometrics · Algorithmic Economics
       </p>
-    </section>
 
-    <footer>
-      <p class="footer center">
-        made with ☕️ and 🐛s.<br />© 2025 ananya dua. all rights reserved.
-      </p>
-    </footer>
+      <p style="text-align: center; font-size: 0.9rem; color: #999; margin-top: 4em;">
+  made with ☕️ and 🐛s.<br />© 2025 ananya dua. all rights reserved.
+</p>
   </div>
 </body>
 </html>
