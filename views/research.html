@@ -10,10 +10,10 @@
 <body>
   <div class="container">
     <header class="navbar">
-      <a href="/" style="text-decoration: none;">
+      <a href="/" class="navbar-brand">
         <span class="name">/ananya dua</span>
       </a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Main navigation">
         <a href="/research.html">/research 🔬</a>
         <a href="/portfolio.html">/portfolio 💻</a>
         <a href="/travel.html">/travel ✈️</a>
@@ -24,82 +24,83 @@
     <hr />
 
     <main>
-      <h1 style="text-align: center;">what I work on</h1>
-      <p style="text-align: center; max-width: 720px; margin: 1em auto;">
-        I develop <strong>robust, ML-powered software systems</strong> combining statistical modeling and signal processing. I design and build scalable data pipelines, simulations, and embedded applications that process complex, noisy real-world data—from biological signals to wireless networks—focusing on <strong>reliability, interpretability, and efficiency in resource-constrained environments.</strong>
-      </p>
+      <section class="intro">
+        <h1 class="center">what I work on</h1>
+        <p class="center max-width">
+          I develop <strong>robust, ML-powered software systems</strong> combining statistical modeling and signal processing. I design and build scalable data pipelines, simulations, and embedded applications that process complex, noisy real-world data—from biological signals to wireless networks—focusing on <strong>reliability, interpretability, and efficiency in resource-constrained environments.</strong>
+        </p>
+      </section>
 
-      <div class="research-grid">
-
-        <div class="project">
+      <section class="research-grid">
+        <article class="project">
           <h2>🛠️ Simulating Wireless Congestion & QoS Degradation</h2>
           <p>
             Built an end-to-end simulation pipeline for wireless network congestion using <strong>MATLAB, Simulink, WLAN Toolbox, and Communications Toolbox</strong>. Modeled multi-user traffic and congestion scenarios on IEEE 802.11-based WLAN networks. Analyzed <strong>latency, throughput, and packet loss</strong> across user loads and identified critical thresholds where performance degraded. Proposed <strong>CSMA/CA protocol optimizations</strong> to enhance QoS. Focused on real-time simulation for embedded and IoT systems.
           </p>
           <a href="/images3/EE122.png" target="_blank">
-            <img src="/images3/EE122.png" alt="Wireless Congestion Poster" style="width: 100%; max-width: 600px; border-radius: 8px; margin-top: 1em;" />
+            <img src="/images3/EE122.png" alt="Wireless Congestion Simulation Poster" class="project-img" />
           </a>
-        </div>
+        </article>
 
-        <div class="project">
+        <article class="project">
           <h2>⌚ Nonparametric ML for HR Prediction</h2>
           <p>
             Designed a contactless heart rate prediction system using only <strong>Apple Watch tri-axial motion accelerometer data</strong>. Applied a <strong>nonparametric copula-based model</strong> to capture nonlinear dependencies between motion and heart rate during sleep. Personalized predictions that outperformed baseline in 20 of 26 subjects. Paper presented and accepted at <strong>IEEE EMBC Copenhagen</strong> (peer-reviewed) and <strong>CPH Frontiers @ UCSF–UC Berkeley</strong>.
           </p>
           <a href="/images3/EMBC.png" target="_blank">
-            <img src="/images3/EMBC.png" alt="Heart Rate Poster" style="width: 100%; max-width: 600px; border-radius: 8px; margin-top: 1em;" />
+            <img src="/images3/EMBC.png" alt="Heart Rate Prediction Poster" class="project-img" />
           </a>
-        </div>
+        </article>
 
-        <div class="project">
+        <article class="project">
           <h2>🛥️ Vessel Trajectory Forecasting with NanoGPT & GeoEncoding</h2>
           <p>
             Developed a forecasting system for predicting vessel movements in maritime fisheries using <strong>GeoHash encoding + NanoGPT</strong>. Transformed AIS data into integer sequences, enabling <strong>low-memory transformer training</strong> in constrained environments. Tackled <strong>vocab explosion, sparsity, and convergence</strong> via token design and regularization. Focused on fixed-gear vessels. Presented at the <strong>CDSS Discovery Symposium</strong> with <strong>InferLink Corp.</strong>.
           </p>
           <a href="/images3/CDSS.png" target="_blank">
-            <img src="/images3/CDSS.png" alt="Vessel Trajectory Poster" style="width: 100%; max-width: 600px; border-radius: 8px; margin-top: 1em;" />
+            <img src="/images3/CDSS.png" alt="Vessel Trajectory Forecasting Poster" class="project-img" />
           </a>
-        </div>
+        </article>
 
-        <div class="project">
-        <h2>🧬 CNN-Based Detection of Macular Degeneration</h2>
-        <p>
-          Developed a <strong>CNN to detect age-related macular degeneration</strong> from retinal images. Implemented preprocessing with normalization, augmentation, and artifact removal for robustness. Leveraged <strong>transfer learning (ResNet, EfficientNet)</strong>, and addressed class imbalance using weighted loss and oversampling. Collaborated with <strong>University of Cambridge</strong> clinicians to ensure clinical relevance and interpretability. Built using <strong>TensorFlow/Keras</strong> and <strong>OpenCV</strong>.
-        </p>
-         <p>
-      <a href="https://arxiv.org/abs/2201.12384" target="_blank">Read the paper on arXiv</a>
-      </p>
-      </div>
-
-        <div class="project">
-          <h2>♟️ RCT: Chess-Based Cognitive Training in Rural Africa</h2>
+        <article class="project">
+          <h2>🧬 CNN-Based Detection of Macular Degeneration</h2>
           <p>
-            Analyzed longitudinal data from a <strong>World Bank–funded randomized controlled trial</strong> spanning 15 primary schools in Kenya. Assessed intervention effects on working memory, executive function, and non-cognitive skills using <strong>robust linear models and Difference-in-Differences (DiD) regression</strong> to control for confounders and time trends. Research conducted in collaboration with <strong>UC Berkeley Economics</strong>.
+            Developed a <strong>CNN to detect age-related macular degeneration</strong> from retinal images. Implemented preprocessing with normalization, augmentation, and artifact removal for robustness. Leveraged <strong>transfer learning (ResNet, EfficientNet)</strong>, and addressed class imbalance using weighted loss and oversampling. Collaborated with <strong>University of Cambridge</strong> clinicians to ensure clinical relevance and interpretability. Built using <strong>TensorFlow/Keras</strong> and <strong>OpenCV</strong>.
           </p>
-        </div>
+          <p>
+            <a href="https://arxiv.org/abs/2201.12384" target="_blank">Read the paper on arXiv</a>
+          </p>
+        </article>
 
-         <div class="project">
+        <article class="project">
+          <h2>🗳️ Bluebonnet Data: Distinguishing Young Voters in Watauga County</h2>
+          <p>
+            Supported the Ben Massey campaign by integrating App State registrar data, VAN files, and state voter records using Python. Employed <strong>fuzzy matching</strong> and automated <strong>PDF-to-CSV extraction</strong> to bypass VAN export limits. Developed a <strong>Tableau dashboard</strong> with <strong>ArcGIS mapping</strong> to visualize and enable targeted student voter outreach.
+        </article>
+
+        <article class="project">
           <h2>🌙 Detecting Sleep-Wake Cycles & Circadian Instability</h2>
           <p>
             Building a signal processing pipeline to detect circadian rhythm disruption from actigraphy data. Extracting rest–activity patterns using <strong>Fourier analysis, smoothing, and instability scoring</strong>. This work aims to enable passive, low-burden monitoring of neurological health from modern consumer wearable sensors.
           </p>
-        </div>
-      </div>
-    </main> 
+        </article>
+      </section>
+    </main>
+
+    <section class="coursework center max-width">
+      <h1>selected coursework</h1>
+      <p>
+        <strong>computer science:</strong> Data Structures & Algorithms · Operating Systems · Machine Learning · Computer Vision · Digital Design · Integrated Circuits · Signal Processing · Communication Networks<br><br>
+        <strong>mathematics:</strong> Optimization · Linear Algebra · Discrete Math · Logic · Stochastic Processes · Real Analysis<br><br>
+        <strong>statistics:</strong> Statistical Learning & Data Science · Causal Inference · Time Series Analysis · Econometrics · Algorithmic Economics
+      </p>
+    </section>
+
+    <footer>
+      <p class="footer center">
+        made with ☕️ and 🐛s.<br />© 2025 ananya dua. all rights reserved.
+      </p>
+    </footer>
   </div>
-
-  <section class="coursework" style="max-width: 720px; margin: 4em auto 2em auto; text-align: center;">
-  <h1 style="text-align: center;">selected coursework</h1>
-<p style="max-width: 720px; margin: auto;">
-  <strong>computer science:</strong> Data Structures & Algorithms · Operating Systems · Machine Learning · Computer Vision · Digital Design · Integrated Circuits · Signal Processing · Communication Networks<br><br>
-  <strong>mathematics:</strong> Optimization · Linear Algebra · Discrete Math · Logic · Stochastic Processes · Real Analysis<br><br>
-  <strong>statistics:</strong> Statistical Learning & Data Science · Causal Inference · Time Series Analysis · Econometrics · Algorithmic Economics
-</p>
-</section>
-
-  <p style="text-align: center; font-size: 0.9rem; color: #999; margin-top: 4em;">
-    made with ☕️ and 🐛s.<br />© 2025 ananya dua. all rights reserved.
-  </p>
-
 </body>
 </html>
