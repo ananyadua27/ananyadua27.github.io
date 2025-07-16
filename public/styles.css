@@ -97,9 +97,8 @@ hr {
   gap: 2em;
   align-items: start;
   padding: 2em;
-  grid-auto-flow: dense; /* 👈 ADD THIS */
+  grid-auto-flow: dense; 
 }
-
 
 .project {
   text-align: center;
@@ -118,3 +117,55 @@ hr {
 .project img:hover {
   transform: scale(1.05);
 }
+
+.project-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin: 3rem auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+}
+
+.project-card {
+  background-color: #fdfdfd;
+  padding: 1.75rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #444;
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+.project-card h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.project-card p {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.tech-bullets {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.project-card a {
+  font-weight: 600;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+

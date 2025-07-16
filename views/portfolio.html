@@ -18,9 +18,59 @@
         <a href="/bookshelf.html">/blog 🖋️</a>
       </nav>
     </header>
+
     <hr />
+
     <main>
-    </main>
+  <h1 style="text-align: center;">project portfolio</h1>
+
+  <div class="project-grid">
+
+    <section class="project-card">
+      <h2>📚 goodreads-companion</h2>
+      <p>
+        A feature-rich Chrome browser extension that augments Goodreads with structured data extraction, natural language processing, Open Library integration, and client-side sentiment visualization. Demonstrates Chrome Extension architecture, DOM parsing, `chrome.storage.sync`, NLP, and Plotly.js.
+      </p>
+      <ul class="tech-bullets">
+        <li><strong>Structured Data:</strong> Extracts metadata using `JSON-LD`</li>
+        <li><strong>NLP:</strong> Classifies reviews with lexicon-based sentiment analysis</li>
+        <li><strong>APIs:</strong> Queries Open Library & WorldCat with fallback logic</li>
+        <li><strong>Visualization:</strong> Uses Plotly.js for bar charts of review sentiment</li>
+        <li><strong>State:</strong> Stores ZIP code and settings with `chrome.storage.sync`</li>
+      </ul>
+      <a href="https://github.com/ananyadua27/goodreads-browser-companion" target="_blank">view on GitHub ↗</a>
+    </section>
+
+    <section class="project-card">
+      <h2>🧠 arxiv-lang-graph</h2>
+      <p>
+        Agentic AI pipeline that processes arXiv research trends using LangGraph-based control flow and FastAPI. Orchestrates transformer-based summarization, quality evaluation, retry logic, and markdown report generation using Redis-backed multi-agent workflows.
+      </p>
+      <ul class="tech-bullets">
+        <li><strong>LangGraph:</strong> Declarative execution graph for agent workflows</li>
+        <li><strong>FastAPI:</strong> Asynchronous REST API with structured endpoints</li>
+        <li><strong>LLMs:</strong> Hugging Face `flan-t5-base` for summarization</li>
+        <li><strong>State:</strong> Redis used for session tracking and retry counters</li>
+        <li><strong>Engineering:</strong> Modular async code, retry loops, markdown generation</li>
+      </ul>
+      <a href="https://github.com/ananyadua27/arxiv-lang-graph" target="_blank">view on GitHub ↗</a>
+    </section>
+
+    <section class="project-card">
+      <h2>🌐 my-website</h2>
+      <p>
+        Hand-crafted in HTML, CSS, and custom styling. Showcases a minimalist personal site with research, portfolio, blog, and travel sections. Designed for clarity, fast loading, and modern semantic markup.
+      </p>
+      <ul class="tech-bullets">
+        <li><strong>HTML5/CSS3:</strong> Fully custom layout with responsive grid</li>
+        <li><strong>Accessibility:</strong> Clean structure, semantic tags, and keyboard navigable</li>
+        <li><strong>Design:</strong> Inspired by clean terminal-style and monospace layouts</li>
+        <li><strong>Deployment:</strong> GitHub Pages</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
   </div>
 
   <p style="text-align: center; font-size: 0.9rem; color: #999; margin-top: 4em;">
