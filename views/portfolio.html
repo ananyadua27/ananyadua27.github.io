@@ -10,7 +10,7 @@
 <body>
   <div class="container">
     <header class="navbar">
-     <a href="/" style="text-decoration: none;"><span class="name">/ananya dua</span></a>
+      <a href="/" style="text-decoration: none;"><span class="name">/ananya dua</span></a>
       <nav class="nav">
         <a href="/research.html">/research 🔬</a>
         <a href="/portfolio.html">/portfolio 💻</a>
@@ -22,140 +22,112 @@
     <hr />
 
     <main>
-  <h1 style="text-align: center;">project portfolio</h1>
+      <h1 style="text-align: center;">project portfolio</h1>
+      <div class="project-grid">
 
-  <div class="project-grid">
+        <section class="project-card">
+          <h2>🤖 GitHub-auto-labeler-bot + dashboard</h2>
+          <p>
+            A full-stack GitHub bot that auto-labels Issues and PRs using rule-based NLP and ML inference. Features a live dashboard to visualize labeling activity. Built with TypeScript, Express, MongoDB, and EJS. Modular, Dockerized, and CI/CD-ready.
+          </p>
+          <ul class="tech-bullets">
+            <li><strong>Automation:</strong> Webhook listener triggers keyword/ML-based label engine</li>
+            <li><strong>ML Inference:</strong> Supports zero-shot classification via Hugging Face models</li>
+            <li><strong>Dashboard:</strong> EJS frontend with filters, live refresh, and activity logging</li>
+            <li><strong>Persistence:</strong> MongoDB (LabelEvents) via Mongoose</li>
+            <li><strong>DevOps:</strong> Docker Compose + GitHub Actions for local and CI/CD deployment</li>
+          </ul>
+          <a href="https://github.com/ananyadua27/GitHub-issue-labeler-bot" target="_blank">View on GitHub ↗</a>
+        </section>
 
-    <section class="project-card">
-    <h2>🤖 GitHub Auto-Labeler Bot + Dashboard</h2>
-    <p>
-      A full-stack GitHub bot that auto-labels Issues and PRs using rule-based NLP and ML inference. Features a live dashboard to visualize labeling activity. Built with TypeScript, Express, MongoDB, and EJS. Modular, Dockerized, and CI/CD-ready.
-    </p>
-    <ul class="tech-bullets">
-      <li><strong>Automation:</strong> Webhook listener triggers keyword/ML-based label engine</li>
-      <li><strong>ML Inference:</strong> Supports zero-shot classification via Hugging Face models</li>
-      <li><strong>Dashboard:</strong> EJS frontend with filters, live refresh, and activity logging</li>
-      <li><strong>Persistence:</strong> MongoDB (LabelEvents) via Mongoose</li>
-      <li><strong>DevOps:</strong> Docker Compose + GitHub Actions for local and CI/CD deployment</li>
-    </ul>
-    <a href="https://github.com/ananyadua27/GitHub-issue-labeler-bot" target="_blank">View on GitHub ↗</a>
-  </section>
+        <section class="project-card">
+          <h2>🔗 shrink-URL</h2>
+          <p>
+            A full-stack URL shortener with real-time analytics and a modern dashboard. Built with the MERN stack using TypeScript, it tracks click counts, access timestamps, and geolocation, simulating a production-grade SaaS tool like Bitly.
+          </p>
+          <ul class="tech-bullets">
+            <li><strong>Frontend:</strong> React + Vite dashboard with auto-refresh and link management</li>
+            <li><strong>Backend:</strong> TypeScript + Express REST API for shortening and analytics</li>
+            <li><strong>Database:</strong> MongoDB Atlas with Mongoose for URL and metrics storage</li>
+            <li><strong>Tracking:</strong> Records clicks, last access time, and location via IP API</li>
+            <li><strong>Deployment:</strong> Vercel (frontend) + Railway (backend), with .env config</li>
+          </ul>
+          <a href="https://github.com/ananyadua27/shrink-URL" target="_blank">View on GitHub ↗</a>
+        </section>
 
-  <section class="project-card">
-    <h2>🔗 shrinkURL</h2>
-    <p>
-      A full-stack URL shortener with real-time analytics and a modern dashboard. Built with the MERN stack using TypeScript, it tracks click counts, access timestamps, and geolocation, simulating a production-grade SaaS tool like Bitly.
-    </p>
-    <ul class="tech-bullets">
-      <li><strong>Frontend:</strong> React + Vite dashboard with auto-refresh and link management</li>
-      <li><strong>Backend:</strong> TypeScript + Express REST API for shortening and analytics</li>
-      <li><strong>Database:</strong> MongoDB Atlas with Mongoose for URL and metrics storage</li>
-      <li><strong>Tracking:</strong> Records clicks, last access time, and location via IP API</li>
-      <li><strong>Deployment:</strong> Vercel (frontend) + Railway (backend), with .env config</li>
-    </ul>
-    <a href="https://github.com/ananyadua27/shrink-URL" target="_blank">View on GitHub ↗</a>
-  </section>
+        <section class="project-card">
+          <h2>🖊️ note-nest</h2>
+          <p>
+            An agentic AI pipeline for extracting and summarizing academic preprints from arXiv using LangGraph and FastAPI. Implements a multi-agent workflow with non-linear retry logic, LLM-powered summarization, and Redis-backed session state for intelligent academic search and synthesis.
+          </p>
+          <ul class="tech-bullets">
+            <li><strong>Agent Workflows:</strong> LangGraph execution graph with conditional retry loops</li>
+            <li><strong>Summarization:</strong> Hugging Face <code>flan-t5-base</code> for 3-sentence abstracts</li>
+            <li><strong>API:</strong> High-performance async REST endpoints with FastAPI</li>
+            <li><strong>State:</strong> Redis for user sessions, retries, and multi-turn context</li>
+            <li><strong>Automation:</strong> Retriever, Summarizer, Evaluator & Compiler agents</li>
+          </ul>
+          <a href="https://github.com/ananyadua27/arxiv-lang-graph" target="_blank">View on GitHub ↗</a>
+        </section>
 
-    <section class="project-card">
-    <h2>📖 Goodreads Companion</h2>
-    <p>
-      A fully client-side Chrome Extension that enhances Goodreads with real-time metadata extraction, sentiment-aware review analysis, ZIP-based library lookup, and interactive data visualizations—no backend required. Demonstrates Manifest V3 architecture, NLP, structured data parsing, and stateful UX design.
-    </p>
-    <ul class="tech-bullets">
-      <li><strong>Metadata:</strong> Parses embedded <code>JSON-LD</code> for title, author, ISBN</li>
-      <li><strong>NLP:</strong> Classifies user reviews via lexicon-based sentiment analysis</li>
-      <li><strong>Library Lookup:</strong> Queries Open Library API; falls back to WorldCat by ZIP</li>
-      <li><strong>Visualization:</strong> Renders review sentiment using Plotly.js bar charts</li>
-      <li><strong>State:</strong> Persists ZIP and settings via <code>chrome.storage.sync</code></li>
-    </ul>
-    <a href="https://github.com/ananyadua27/Goodreads-companion" target="_blank">View on GitHub ↗</a>
-  </section>
+        <section class="project-card">
+          <h2>📖 Goodreads-companion</h2>
+          <p>
+            A fully client-side Chrome Extension that enhances Goodreads with real-time metadata extraction, sentiment-aware review analysis, ZIP-based library lookup, and interactive data visualizations—no backend required. Demonstrates Manifest V3 architecture, NLP, structured data parsing, and stateful UX design.
+          </p>
+          <ul class="tech-bullets">
+            <li><strong>Metadata:</strong> Parses embedded <code>JSON-LD</code> for title, author, ISBN</li>
+            <li><strong>NLP:</strong> Classifies user reviews via lexicon-based sentiment analysis</li>
+            <li><strong>Library Lookup:</strong> Queries Open Library API; falls back to WorldCat by ZIP</li>
+            <li><strong>Visualization:</strong> Renders review sentiment using Plotly.js bar charts</li>
+            <li><strong>State:</strong> Persists ZIP and settings via <code>chrome.storage.sync</code></li>
+          </ul>
+          <a href="https://github.com/ananyadua27/Goodreads-companion" target="_blank">View on GitHub ↗</a>
+        </section>
 
+        <section class="project-card">
+          <h2>🧠 arxiv-lang-graph</h2>
+          <p>
+            An agentic AI pipeline for extracting and summarizing academic preprints from arXiv using LangGraph and FastAPI. Implements a multi-agent workflow with non-linear retry logic, LLM-powered summarization, and Redis-backed session state for intelligent academic search and synthesis.
+          </p>
+          <ul class="tech-bullets">
+            <li><strong>Agent Workflows:</strong> LangGraph execution graph with conditional retry loops</li>
+            <li><strong>Summarization:</strong> Hugging Face <code>flan-t5-base</code> for 3-sentence abstracts</li>
+            <li><strong>API:</strong> High-performance async REST endpoints with FastAPI</li>
+            <li><strong>State:</strong> Redis for user sessions, retries, and multi-turn context</li>
+            <li><strong>Automation:</strong> Retriever, Summarizer, Evaluator & Compiler agents</li>
+          </ul>
+          <a href="https://github.com/ananyadua27/arxiv-lang-graph" target="_blank">View on GitHub ↗</a>
+        </section>
 
-    <section class="project-card">
-    <h2>🧠 Agentic AI for Research</h2>
-    <p>
-      An agentic AI pipeline for extracting and summarizing academic preprints from arXiv using LangGraph and FastAPI. Implements a multi-agent workflow with non-linear retry logic, LLM-powered summarization, and Redis-backed session state for intelligent academic search and synthesis.
-    </p>
-    <ul class="tech-bullets">
-      <li><strong>Agent Workflows:</strong> LangGraph execution graph with conditional retry loops</li>
-      <li><strong>Summarization:</strong> Hugging Face <code>flan-t5-base</code> for 3-sentence abstracts</li>
-      <li><strong>API:</strong> High-performance async REST endpoints with FastAPI</li>
-      <li><strong>State:</strong> Redis for user sessions, retries, and multi-turn context</li>
-      <li><strong>Automation:</strong> Retriever, Summarizer, Evaluator & Compiler agents</li>
-    </ul>
-    <a href="https://github.com/ananyadua27/arxiv-lang-graph" target="_blank">View on GitHub ↗</a>
-  </section>
-
-    <section class="project-card">
-    <h2>🌐 Personal Website</h2>
-    <p>
-      A minimalist, fully static personal site built with semantic HTML and custom CSS. Showcases research, projects, travel writing, and blog posts. Designed for speed, clarity, and long-term maintainability.
-    </p>
-    <ul class="tech-bullets">
-      <li><strong>HTML/CSS:</strong> Responsive layout with semantic markup</li>
-      <li><strong>Accessibility:</strong> Keyboard navigable, ARIA-aware structure</li>
-      <li><strong>Design:</strong> Monospace-first typography with terminal-inspired styling</li>
-      <li><strong>Content:</strong> Modular sections for research, portfolio, travel, and blog</li>
-      <li><strong>Deployment:</strong> GitHub Pages with version-controlled source</li>
-    </ul>
-    <a href="https://github.com/ananyadua27/my-website" target="_blank">View on GitHub ↗</a>
-  </section>
-
-  <div class="skills-section">
-  <h3>programming languages</h3>
-  <div class="pill-container">
-    <div class="pill">Python</div>
-    <div class="pill">☕ Java</div>
-    <div class="pill">✨ JavaScript</div>
-    <div class="pill">📘 TypeScript</div>
-    <div class="pill">🌐 HTML</div>
-    <div class="pill">🎨 CSS</div>
-    <div class="pill">📊 R</div>
-    <div class="pill">SQL</div>
-    <div class="pill">Stata</div>
-    <div class="pill">C++</div>
-  </div>
-
-  <h3>frameworks</h3>
-  <div class="pill-container">
-    <div class="pill">⚛️ ReactJS</div>
-    <div class="pill">🤖 TensorFlow</div>
-    <div class="pill">PyTorch</div>
-    <div class="pill">NumPy</div>
-    <div class="pill">🐼 pandas</div>
-    <div class="pill">🚂 Express</div>
-    <div class="pill">✨ Next.js</div>
-    <div class="pill">📱 React Native</div>
-    <div class="pill">🌳 Node.js</div>
-    <div class="pill">🕸️ LangGraph</div>
-    <div class="pill">🧪 pytest</div>
-  </div>
-
-  <h3>technologies</h3>
-  <div class="pill-container">
-    <div class="pill">🔧 Git</div>
-    <div class="pill">🔥 Firebase</div>
-    <div class="pill">OpenCV</div>
-    <div class="pill">GitHub</div>
-    <div class="pill">☁️ Google Cloud</div>
-    <div class="pill"> AWS</div>
-    <div class="pill">🚀 FastAPI</div>
-    <div class="pill">🧠 Redis</div>
-    <div class="pill"> MongoDB</div>
-    <div class="pill">🔗 REST API</div>
-    <div class="pill">🐳 Docker</div>
-    <div class="pill">📄 InDesign</div>
-  </div>
-</div>
-
-  </div>
-</main>
+        <section class="project-card">
+          <h2>🌐 my-website</h2>
+          <p>
+            A minimalist, fully static personal site built with semantic HTML and custom CSS. Showcases research, projects, travel writing, and blog posts. Designed for speed, clarity, and long-term maintainability.
+          </p>
+          <ul class="tech-bullets">
+            <li><strong>HTML/CSS:</strong> Responsive layout with semantic markup</li>
+            <li><strong>Accessibility:</strong> Keyboard navigable, ARIA-aware structure</li>
+            <li><strong>Design:</strong> Monospace-first typography with terminal-inspired styling</li>
+            <li><strong>Content:</strong> Modular sections for research, portfolio, travel, and blog</li>
+            <li><strong>Deployment:</strong> GitHub Pages with version-controlled source</li>
+          </ul>
+          <a href="https://github.com/ananyadua27/my-website" target="_blank">View on GitHub ↗</a>
+        </section>
+      </div>
+        <h1 style="text-align: center;">technical skills</h1>
+        <p>
+          <strong>programming languages:</strong> Python · ☕ Java · JavaScript · 📘 TypeScript · 🌐 HTML · 🎨 CSS · 📊 R · SQL · Stata · C++ · 🐍 Bash · 🧾 LaTeX<br><br>
+          <strong>frameworks & libraries:</strong> ⚛️ ReactJS · 🤖 TensorFlow · PyTorch · NumPy · pandas · 🚂 Express · Next.js · React Native · Node.js · 🕸️ LangGraph · pytest<br><br>
+          <strong>technologies:</strong> 🔧 Git · Firebase · OpenCV · GitHub · ☁️ Google Cloud · AWS · 🚀 FastAPI · 🧠 Redis · MongoDB · 🔗 REST API · 🐳 Docker · 📄 InDesign<br><br>
+          <strong>devops & tools:</strong> 🛠️ GitHub Actions · Vercel · 🚄 Railway · CI/CD · 🐘 PostgreSQL · Docker Compose
+        </p>
+    </main>
   </div>
 
   <p style="text-align: center; font-size: 0.9rem; color: #999; margin-top: 4em;">
-  made with ☕️ and 🐛s.<br />© 2025 ananya dua. all rights reserved.
-</p>
+    made with ☕️ and 🐛s.<br />© 2025 ananya dua. all rights reserved.
+  </p>
 
 </body>
 </html>

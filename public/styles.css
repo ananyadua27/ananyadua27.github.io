@@ -197,4 +197,21 @@ hr {
   display: inline-block;
 }
 
+.skills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+  font-size: 0.95rem;
+  color: #333;
+  gap: 10px;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 20px;
+}
+.skills-row span {
+  white-space: nowrap;
+}
+
+
 
