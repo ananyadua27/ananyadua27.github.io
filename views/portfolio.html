@@ -27,47 +27,80 @@
   <div class="project-grid">
 
     <section class="project-card">
-      <h2>📚 goodreads-companion</h2>
-      <p>
-        A feature-rich Chrome browser extension that augments Goodreads with structured data extraction, natural language processing, Open Library integration, and client-side sentiment visualization. Demonstrates Chrome Extension architecture, DOM parsing, `chrome.storage.sync`, NLP, and Plotly.js.
-      </p>
-      <ul class="tech-bullets">
-        <li><strong>Structured Data:</strong> Extracts metadata using `JSON-LD`</li>
-        <li><strong>NLP:</strong> Classifies reviews with lexicon-based sentiment analysis</li>
-        <li><strong>APIs:</strong> Queries Open Library & WorldCat with fallback logic</li>
-        <li><strong>Visualization:</strong> Uses Plotly.js for bar charts of review sentiment</li>
-        <li><strong>State:</strong> Stores ZIP code and settings with `chrome.storage.sync`</li>
-      </ul>
-      <a href="https://github.com/ananyadua27/goodreads-browser-companion" target="_blank">view on GitHub ↗</a>
-    </section>
+    <h2>🤖 GitHub Auto-Labeler Bot + Dashboard</h2>
+    <p>
+      A full-stack GitHub bot that auto-labels Issues and PRs using rule-based NLP and ML inference. Features a live dashboard to visualize labeling activity. Built with TypeScript, Express, MongoDB, and EJS. Modular, Dockerized, and CI/CD-ready.
+    </p>
+    <ul class="tech-bullets">
+      <li><strong>Automation:</strong> Webhook listener triggers keyword/ML-based label engine</li>
+      <li><strong>ML Inference:</strong> Supports zero-shot classification via Hugging Face models</li>
+      <li><strong>Dashboard:</strong> EJS frontend with filters, live refresh, and activity logging</li>
+      <li><strong>Persistence:</strong> MongoDB (LabelEvents) via Mongoose</li>
+      <li><strong>DevOps:</strong> Docker Compose + GitHub Actions for local and CI/CD deployment</li>
+    </ul>
+    <a href="https://github.com/ananyadua27/GitHub-issue-labeler-bot" target="_blank">View on GitHub ↗</a>
+  </section>
+
+  <section class="project-card">
+    <h2>🔗 shrinkURL</h2>
+    <p>
+      A full-stack URL shortener with real-time analytics and a modern dashboard. Built with the MERN stack using TypeScript, it tracks click counts, access timestamps, and geolocation, simulating a production-grade SaaS tool like Bitly.
+    </p>
+    <ul class="tech-bullets">
+      <li><strong>Frontend:</strong> React + Vite dashboard with auto-refresh and link management</li>
+      <li><strong>Backend:</strong> TypeScript + Express REST API for shortening and analytics</li>
+      <li><strong>Database:</strong> MongoDB Atlas with Mongoose for URL and metrics storage</li>
+      <li><strong>Tracking:</strong> Records clicks, last access time, and location via IP API</li>
+      <li><strong>Deployment:</strong> Vercel (frontend) + Railway (backend), with .env config</li>
+    </ul>
+    <a href="https://github.com/ananyadua27/shrink-URL" target="_blank">View on GitHub ↗</a>
+  </section>
 
     <section class="project-card">
-      <h2>🧠 arxiv-lang-graph</h2>
-      <p>
-        Agentic AI pipeline that processes arXiv research trends using LangGraph-based control flow and FastAPI. Orchestrates transformer-based summarization, quality evaluation, retry logic, and markdown report generation using Redis-backed multi-agent workflows.
-      </p>
-      <ul class="tech-bullets">
-        <li><strong>LangGraph:</strong> Declarative execution graph for agent workflows</li>
-        <li><strong>FastAPI:</strong> Asynchronous REST API with structured endpoints</li>
-        <li><strong>LLMs:</strong> Hugging Face `flan-t5-base` for summarization</li>
-        <li><strong>State:</strong> Redis used for session tracking and retry counters</li>
-        <li><strong>Engineering:</strong> Modular async code, retry loops, markdown generation</li>
-      </ul>
-      <a href="https://github.com/ananyadua27/arxiv-lang-graph" target="_blank">view on GitHub ↗</a>
-    </section>
+    <h2>📖 Goodreads Companion</h2>
+    <p>
+      A fully client-side Chrome Extension that enhances Goodreads with real-time metadata extraction, sentiment-aware review analysis, ZIP-based library lookup, and interactive data visualizations—no backend required. Demonstrates Manifest V3 architecture, NLP, structured data parsing, and stateful UX design.
+    </p>
+    <ul class="tech-bullets">
+      <li><strong>Metadata:</strong> Parses embedded <code>JSON-LD</code> for title, author, ISBN</li>
+      <li><strong>NLP:</strong> Classifies user reviews via lexicon-based sentiment analysis</li>
+      <li><strong>Library Lookup:</strong> Queries Open Library API; falls back to WorldCat by ZIP</li>
+      <li><strong>Visualization:</strong> Renders review sentiment using Plotly.js bar charts</li>
+      <li><strong>State:</strong> Persists ZIP and settings via <code>chrome.storage.sync</code></li>
+    </ul>
+    <a href="https://github.com/ananyadua27/Goodreads-companion" target="_blank">View on GitHub ↗</a>
+  </section>
+
 
     <section class="project-card">
-      <h2>🌐 my-website</h2>
-      <p>
-        Hand-crafted in HTML, CSS, and custom styling. Showcases a minimalist personal site with research, portfolio, blog, and travel sections. Designed for clarity, fast loading, and modern semantic markup.
-      </p>
-      <ul class="tech-bullets">
-        <li><strong>HTML5/CSS3:</strong> Fully custom layout with responsive grid</li>
-        <li><strong>Accessibility:</strong> Clean structure, semantic tags, and keyboard navigable</li>
-        <li><strong>Design:</strong> Inspired by clean terminal-style and monospace layouts</li>
-        <li><strong>Deployment:</strong> GitHub Pages</li>
-      </ul>
-    </section>
+    <h2>🧠 Agentic AI for Research</h2>
+    <p>
+      An agentic AI pipeline for extracting and summarizing academic preprints from arXiv using LangGraph and FastAPI. Implements a multi-agent workflow with non-linear retry logic, LLM-powered summarization, and Redis-backed session state for intelligent academic search and synthesis.
+    </p>
+    <ul class="tech-bullets">
+      <li><strong>Agent Workflows:</strong> LangGraph execution graph with conditional retry loops</li>
+      <li><strong>Summarization:</strong> Hugging Face <code>flan-t5-base</code> for 3-sentence abstracts</li>
+      <li><strong>API:</strong> High-performance async REST endpoints with FastAPI</li>
+      <li><strong>State:</strong> Redis for user sessions, retries, and multi-turn context</li>
+      <li><strong>Automation:</strong> Retriever, Summarizer, Evaluator & Compiler agents</li>
+    </ul>
+    <a href="https://github.com/ananyadua27/arxiv-lang-graph" target="_blank">View on GitHub ↗</a>
+  </section>
+
+    <section class="project-card">
+    <h2>🌐 Personal Website</h2>
+    <p>
+      A minimalist, fully static personal site built with semantic HTML and custom CSS. Showcases research, projects, travel writing, and blog posts. Designed for speed, clarity, and long-term maintainability.
+    </p>
+    <ul class="tech-bullets">
+      <li><strong>HTML/CSS:</strong> Responsive layout with semantic markup</li>
+      <li><strong>Accessibility:</strong> Keyboard navigable, ARIA-aware structure</li>
+      <li><strong>Design:</strong> Monospace-first typography with terminal-inspired styling</li>
+      <li><strong>Content:</strong> Modular sections for research, portfolio, travel, and blog</li>
+      <li><strong>Deployment:</strong> GitHub Pages with version-controlled source</li>
+    </ul>
+    <a href="https://github.com/ananyadua27/my-website" target="_blank">View on GitHub ↗</a>
+  </section>
 
   <div class="skills-section">
   <h3>programming languages</h3>
@@ -109,13 +142,12 @@
     <div class="pill"> AWS</div>
     <div class="pill">🚀 FastAPI</div>
     <div class="pill">🧠 Redis</div>
+    <div class="pill"> MongoDB</div>
     <div class="pill">🔗 REST API</div>
     <div class="pill">🐳 Docker</div>
     <div class="pill">📄 InDesign</div>
   </div>
 </div>
-
-
 
   </div>
 </main>
