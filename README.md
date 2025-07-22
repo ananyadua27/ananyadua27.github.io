@@ -1,7 +1,7 @@
 # Personal Website
 Built with semantic HTML and custom CSS, this site showcases my research, projects, travel, and writing.
 > A fully static site built with semantic HTML and custom CSS. Designed for clarity, fast load times, and long-term maintainability.
-
+> https://ananyadua27.github.io/my-website/
 
 ## Features
 
@@ -14,7 +14,7 @@ Built with semantic HTML and custom CSS, this site showcases my research, projec
 
 ## Deployment
 
-This site is deployed via [GitHub Pages](https://pages.github.com/) from the `main` branch.
+This site is deployed via GitHub Pages from the `main` branch.
 
 ## 📄 License
 
