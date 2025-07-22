@@ -18,4 +18,4 @@ This site is deployed via [GitHub Pages](https://pages.github.com/) from the `ma
 
 ## 📄 License
 
-MIT 2025 © Ananya Dua
+MIT License © Ananya Dua
