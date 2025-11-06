@@ -4,8 +4,247 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>hi i'm ananya.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0a;
+      color: #e8e8e8;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.015) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 0.05em;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .name::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #fff;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .name:hover::after {
+      width: 100%;
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.5);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #fff;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav a:hover {
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .nav a:hover::before {
+      width: 100%;
+    }
+
+    hr {
+      display: none;
+    }
+
+    main {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 300;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+      color: #fff;
+      position: relative;
+      padding-left: 1rem;
+      border-left: 2px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h2:hover {
+      border-left-color: rgba(255, 255, 255, 0.5);
+      padding-left: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 2rem;
+      line-height: 1.8;
+      max-width: 900px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 3rem 0;
+      padding: 0;
+    }
+
+    .image-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 4px;
+      opacity: 0.7;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+    }
+
+    .image-grid img:hover {
+      opacity: 1;
+      transform: scale(1.05) translateY(-4px);
+      border-color: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      position: relative;
+    }
+
+    .image-grid img:nth-child(odd) {
+      animation: float 8s ease-in-out infinite;
+    }
+
+    .image-grid img:nth-child(even) {
+      animation: float 10s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+
+    br {
+      margin: 2rem 0;
+    }
+
+    body > p {
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 6rem;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .image-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.75rem;
+      }
+
+      .image-grid img {
+        height: 200px;
+      }
+
+      .nav {
+        gap: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">

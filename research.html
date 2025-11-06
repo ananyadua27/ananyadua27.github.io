@@ -4,8 +4,376 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>hi i'm ananya.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #0a0a0a;
+      color: #e8e8e8;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.015) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #fff;
+      letter-spacing: 0.05em;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .name::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #fff;
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .name:hover::after {
+      width: 100%;
+    }
+
+    .nav {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.5);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav a::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #fff;
+      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav a:hover {
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .nav a:hover::before {
+      width: 100%;
+    }
+
+    hr {
+      display: none;
+    }
+
+    main {
+      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+      text-align: center;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+      position: relative;
+      animation: glitch 8s infinite;
+    }
+
+    @keyframes glitch {
+      0%, 100% {
+        transform: translate(0);
+      }
+      20% {
+        transform: translate(-1px, 1px);
+      }
+      40% {
+        transform: translate(-1px, -1px);
+      }
+      60% {
+        transform: translate(1px, 1px);
+      }
+      80% {
+        transform: translate(1px, -1px);
+      }
+    }
+
+    h1::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      color: rgba(255, 255, 255, 0.1);
+      animation: glitchText 8s infinite;
+    }
+
+    @keyframes glitchText {
+      0%, 100% {
+        clip-path: inset(0 0 0 0);
+        transform: translateX(-50%) translate(0);
+      }
+      20% {
+        clip-path: inset(20% 0 60% 0);
+        transform: translateX(-50%) translate(-2px, 2px);
+      }
+      40% {
+        clip-path: inset(60% 0 20% 0);
+        transform: translateX(-50%) translate(2px, -2px);
+      }
+      60% {
+        clip-path: inset(40% 0 40% 0);
+        transform: translateX(-50%) translate(-1px, 1px);
+      }
+      80% {
+        clip-path: inset(10% 0 80% 0);
+        transform: translateX(-50%) translate(1px, -1px);
+      }
+    }
+
+    .center.max-width {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.7);
+      line-height: 1.8;
+    }
+
+    .center.max-width strong {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+      padding: 0;
+    }
+
+    .project {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: float 6s ease-in-out infinite;
+      animation-delay: calc(var(--delay, 0) * 0.1s);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-8px) rotate(0.5deg);
+      }
+    }
+
+    .project::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+      transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .project:hover::before {
+      left: 100%;
+    }
+
+    .project:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.15);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .project:nth-child(odd) {
+      --delay: 1;
+    }
+
+    .project:nth-child(even) {
+      --delay: 2;
+      animation-direction: reverse;
+    }
+
+    .project h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+
+    .project strong {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    .project-img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-top: 1rem;
+      opacity: 0.8;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .project a:hover .project-img {
+      opacity: 1;
+      transform: scale(1.02);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .project a {
+      display: block;
+      text-decoration: none;
+    }
+
+    main > p {
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+
+    main > p strong {
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 500;
+    }
+
+    body > p {
+      text-align: center;
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 6rem;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: 0.05em;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .research-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .project {
+        padding: 1.5rem;
+      }
+
+      .nav {
+        gap: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+
+    .project:nth-child(3n) {
+      animation: float 7s ease-in-out infinite, pulse 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.95;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -22,7 +390,7 @@
     <hr />
 
     <main>
-      <h1 style="text-align: center;">what I work on</h1>
+      <h1 data-text="what I work on">what I work on</h1>
       <p class="center max-width">
         I develop <strong>robust, ML-powered software systems</strong> that combine statistical modeling and signal processing. 
         I design and build scalable data pipelines, simulations, and embedded applications that process complex, noisy real-world data—from biological signals to wireless networks—
@@ -150,7 +518,7 @@
       </section>
     </main>
 
-    <h1 style="text-align: center;">selected coursework</h1>
+    <h1 data-text="selected coursework">selected coursework</h1>
     <p>
       <strong>computer science:</strong> Data Structures & Algorithms · Operating Systems · Computer Architecture · Machine Learning · Digital Design · Integrated Circuits · Signal Processing · Communication Networks · Microelectronic Devices<br><br>
       <strong>mathematics:</strong> Optimization · Linear Algebra · Discrete Math · Logic · Stochastic Processes · Real Analysis · Complex Analysis · Abstract Algebra · Combinatorics<br><br>
