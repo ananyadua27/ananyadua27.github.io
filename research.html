@@ -4,78 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>hi i'm ananya.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: #0a0a0a;
       color: #e8e8e8;
-      line-height: 1.6;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: 
-        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.015) 0%, transparent 50%);
-      pointer-events: none;
-      z-index: 0;
+      line-height: 1.7;
     }
 
     .container {
-      position: relative;
-      z-index: 1;
       max-width: 1200px;
       margin: 0 auto;
       padding: 4rem 2rem;
     }
 
-    .navbar {
+    header.navbar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding-bottom: 1rem;
       margin-bottom: 3rem;
-      padding: 1rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-family: 'JetBrains Mono', monospace;
     }
 
     .name {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.95rem;
-      font-weight: 500;
       color: #fff;
+      font-size: 0.95rem;
       letter-spacing: 0.05em;
-      position: relative;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .name::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: #fff;
-      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .name:hover::after {
-      width: 100%;
+      text-decoration: none;
     }
 
     .nav {
@@ -85,212 +45,83 @@
     }
 
     .nav a {
-      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.6);
       font-size: 0.85rem;
       text-decoration: none;
-      color: rgba(255, 255, 255, 0.5);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      padding: 0.25rem 0;
+      transition: color 0.2s, transform 0.2s;
     }
 
-    .nav a::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: #fff;
-      transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .nav a:hover {
-      color: #fff;
-      transform: translateY(-2px);
-    }
-
-    .nav a:hover::before {
-      width: 100%;
-    }
-
-    hr {
-      display: none;
-    }
-
-    main {
-      animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+    .nav a:hover { color: #fff; transform: translateY(-2px); }
 
     h1 {
-      font-size: 2.5rem;
-      font-weight: 300;
       text-align: center;
-      margin-bottom: 2rem;
+      font-weight: 400;
+      font-size: 2.3rem;
+      color: #fff;
+      margin: 3rem 0 2rem;
       letter-spacing: -0.02em;
-      position: relative;
-      animation: glitch 8s infinite;
-    }
-
-    @keyframes glitch {
-      0%, 100% {
-        transform: translate(0);
-      }
-      20% {
-        transform: translate(-1px, 1px);
-      }
-      40% {
-        transform: translate(-1px, -1px);
-      }
-      60% {
-        transform: translate(1px, 1px);
-      }
-      80% {
-        transform: translate(1px, -1px);
-      }
-    }
-
-    h1::before {
-      content: attr(data-text);
-      position: absolute;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      color: rgba(255, 255, 255, 0.1);
-      animation: glitchText 8s infinite;
-    }
-
-    @keyframes glitchText {
-      0%, 100% {
-        clip-path: inset(0 0 0 0);
-        transform: translateX(-50%) translate(0);
-      }
-      20% {
-        clip-path: inset(20% 0 60% 0);
-        transform: translateX(-50%) translate(-2px, 2px);
-      }
-      40% {
-        clip-path: inset(60% 0 20% 0);
-        transform: translateX(-50%) translate(2px, -2px);
-      }
-      60% {
-        clip-path: inset(40% 0 40% 0);
-        transform: translateX(-50%) translate(-1px, 1px);
-      }
-      80% {
-        clip-path: inset(10% 0 80% 0);
-        transform: translateX(-50%) translate(1px, -1px);
-      }
     }
 
     .center.max-width {
       text-align: center;
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto 3rem;
-      font-size: 1.05rem;
-      color: rgba(255, 255, 255, 0.7);
+      font-size: 1rem;
+      color: rgba(255,255,255,0.75);
       line-height: 1.8;
     }
 
-    .center.max-width strong {
-      color: rgba(255, 255, 255, 0.9);
-    }
+    .center.max-width strong { color: rgba(255,255,255,0.9); }
 
     .research-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
       margin: 3rem 0;
-      padding: 0;
     }
 
     .project {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
       padding: 2rem;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-      animation: float 6s ease-in-out infinite;
-      animation-delay: calc(var(--delay, 0) * 0.1s);
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-8px) rotate(0.5deg);
-      }
-    }
-
-    .project::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
-      transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .project:hover::before {
-      left: 100%;
+      transition: transform 0.25s ease, border-color 0.25s ease;
     }
 
     .project:hover {
-      background: rgba(255, 255, 255, 0.04);
-      border-color: rgba(255, 255, 255, 0.15);
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    }
-
-    .project:nth-child(odd) {
-      --delay: 1;
-    }
-
-    .project:nth-child(even) {
-      --delay: 2;
-      animation-direction: reverse;
+      border-color: rgba(255,255,255,0.25);
+      transform: translateY(-4px);
     }
 
     .project h2 {
       font-size: 1.3rem;
       font-weight: 500;
-      margin-bottom: 1rem;
-      letter-spacing: -0.01em;
       color: #fff;
-      position: relative;
-      z-index: 1;
+      margin-bottom: 1rem;
+      font-family: 'JetBrains Mono', monospace;
     }
 
     .project p {
       font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.7);
-      margin-bottom: 1.5rem;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1rem;
       line-height: 1.7;
-      position: relative;
-      z-index: 1;
+    }
+
+    .project ul {
+      padding-left: 1.1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project li {
+      margin-bottom: 0.5rem;
+      color: rgba(255,255,255,0.75);
     }
 
     .project strong {
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 500;
+      color: rgba(255,255,255,0.95);
+      font-weight: 600;
     }
 
     .project-img {
@@ -298,87 +129,48 @@
       height: auto;
       border-radius: 4px;
       margin-top: 1rem;
-      opacity: 0.8;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      opacity: 0.9;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: opacity 0.2s, transform 0.2s;
     }
 
     .project a:hover .project-img {
       opacity: 1;
       transform: scale(1.02);
-      border-color: rgba(255, 255, 255, 0.2);
-    }
-
-    .project a {
-      display: block;
-      text-decoration: none;
+      border-color: rgba(255,255,255,0.2);
     }
 
     main > p {
-      font-size: 0.95rem;
-      color: rgba(255, 255, 255, 0.6);
+      text-align: center;
+      color: rgba(255,255,255,0.7);
       line-height: 1.8;
-      max-width: 900px;
       margin: 3rem auto;
-      text-align: center;
+      max-width: 900px;
     }
 
-    main > p strong {
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: 500;
-    }
+    main > p strong { color: rgba(255,255,255,0.9); }
 
-    body > p {
+    footer {
       text-align: center;
-      font-size: 0.8rem;
-      color: rgba(255, 255, 255, 0.3);
-      margin-top: 6rem;
       font-family: 'JetBrains Mono', monospace;
-      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.8rem;
+      margin-top: 4rem;
     }
 
     @media (max-width: 768px) {
-      .container {
-        padding: 2rem 1.5rem;
-      }
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      .research-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .project {
-        padding: 1.5rem;
-      }
-
-      .nav {
-        gap: 1rem;
-        font-size: 0.8rem;
-      }
-    }
-
-    .project:nth-child(3n) {
-      animation: float 7s ease-in-out infinite, pulse 4s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.95;
-      }
+      .container { padding: 2rem 1.5rem; }
+      .nav { gap: 1rem; font-size: 0.8rem; }
+      h1 { font-size: 2rem; }
+      .project { padding: 1.5rem; }
+      .research-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header class="navbar">
-      <a href="index.html" style="text-decoration: none;"><span class="name">/ananya dua</span></a>
+      <a href="index.html" class="name">/ananya dua</a>
       <nav class="nav">
         <a href="research.html">/research 🔬</a>
         <a href="portfolio.html">/portfolio 💻</a>
@@ -387,147 +179,151 @@
       </nav>
     </header>
 
-    <hr />
-
     <main>
-      <h1 data-text="what I work on">what I work on</h1>
+      <h1>what I work on</h1>
       <p class="center max-width">
-        I develop <strong>robust, ML-powered software systems</strong> that combine statistical modeling and signal processing. 
-        I design and build scalable data pipelines, simulations, and embedded applications that process complex, noisy real-world data—from biological signals to wireless networks—
-        focusing on <strong>reliability, interpretability, and efficiency in resource-constrained environments.</strong>
+        I build <strong>production-grade ML and systems pipelines</strong> that fuse statistical modeling and signal processing. 
+        I care about <strong>latency, failure modes, and observability</strong>, and I design for <strong>reliability, interpretability, and efficiency</strong> under real constraints.
       </p>
 
       <section class="research-grid">
 
         <article class="project">
-          <h2>📡 Simulating Wireless Congestion & QoS Degradation</h2>
+          <h2>📡 Wireless Congestion Simulation and QoS Analysis</h2>
           <p>
-            Built an end-to-end simulation pipeline for wireless network congestion using 
-            <strong>MATLAB, Simulink, WLAN Toolbox, and Communications Toolbox</strong>. 
-            Modeled multi-user traffic and congestion scenarios on IEEE 802.11-based WLAN networks. 
-            Analyzed <strong>latency, throughput, and packet loss</strong> across user loads and identified critical thresholds where performance degraded. 
-            Proposed <strong>CSMA/CA protocol optimizations</strong> to enhance QoS. Focused on real-time simulation for embedded and IoT systems.
+            End-to-end WLAN simulation environment in <strong>MATLAB + Simulink</strong> that models multi-user traffic over IEEE 802.11. 
+            Stress tests access strategies and measures <strong>p50 and p95 latency, throughput, packet loss</strong> across load regimes. 
+            Proposed <strong>CSMA/CA tuning strategies</strong> to stabilize QoS under congestion.
           </p>
-          <a href="images3/EE122.png" target="_blank">
-            <img src="images3/EE122.png" alt="Wireless Congestion Simulation Poster" class="project-img" />
-          </a>
+          <ul>
+            <li>Scenario generator for bursty and periodic traffic profiles</li>
+            <li>Reproducible runs with seeded channels and mobility models</li>
+            <li>Metrics export to Parquet for downstream analysis</li>
+          </ul>
+          <a href="images3/EE122.png" target="_blank"><img src="images3/EE122.png" alt="Wireless Congestion Simulation Poster" class="project-img" /></a>
         </article>
 
         <article class="project">
-          <h2>🧠 Nonparametric ML for HR Prediction</h2>
+          <h2>🧠 Contactless HR Prediction with Copula Models</h2>
           <p>
-            Designed a contactless heart rate prediction system using <strong>Apple Watch tri-axial motion accelerometer data</strong>. 
-            Applied a <strong>nonparametric copula-based model</strong> to capture nonlinear dependencies between motion and heart rate during sleep. 
-            Personalized predictions outperformed baseline in 20 of 26 subjects. 
-            Presented at <strong>IEEE EMBC Copenhagen</strong> and <strong>CPH Frontiers @ UCSF–UC Berkeley</strong>.
+            Sleep-phase heart rate prediction from <strong>Apple Watch tri-axial accelerometry</strong> using a <strong>nonparametric copula</strong> to capture 
+            motion–HR dependence. Personalized models outperform subject-agnostic baselines in held-out subjects. 
+            Presented at <strong>IEEE EMBC</strong> and <strong>CPH Frontiers</strong>.
           </p>
-          <a href="images3/EMBC.png" target="_blank">
-            <img src="images3/EMBC.png" alt="Heart Rate Prediction Poster" class="project-img" />
-          </a>
-        </article>
-        <article class="project">
-          <h2>🛰️ Vessel Trajectory Forecasting with NanoGPT & GeoEncoding</h2>
-          <p>
-            Developed a forecasting system for predicting vessel movements in maritime fisheries using <strong>GeoHash encoding + NanoGPT</strong>. 
-            Transformed AIS data into integer sequences, enabling <strong>low-memory transformer training</strong> in constrained environments. 
-            Tackled <strong>vocab explosion, sparsity, and convergence</strong> via token design and regularization. 
-            Presented at the <strong>CDSS Discovery Symposium</strong> with <strong>InferLink Corp</strong>.
-          </p>
-          <a href="images3/CDSS.png" target="_blank">
-            <img src="images3/CDSS.png" alt="Vessel Trajectory Forecasting Poster" class="project-img" />
-          </a>
+          <ul>
+            <li>Pipeline includes denoising, segmentation, covariate normalization</li>
+            <li>Cross-validated hyperparameters, per-subject calibration</li>
+            <li>Robustness checks for motion artifacts and missingness</li>
+          </ul>
+          <a href="images3/EMBC.png" target="_blank"><img src="images3/EMBC.png" alt="Heart Rate Prediction Poster" class="project-img" /></a>
         </article>
 
         <article class="project">
-          <h2>🧭 Bluebonnet Data: Distinguishing Young Voters in Watauga County</h2>
+          <h2>🛰️ AIS Vessel Trajectory Forecasting with NanoGPT</h2>
           <p>
-            Supported Ben Massey's NC House campaign by integrating registrar data, VAN files, and public voter records using <strong>SQL</strong>. 
-            Employed <strong>fuzzy matching</strong> and automated <strong>PDF-to-CSV extraction</strong> to bypass export limits. 
-            Developed a <strong>Tableau dashboard</strong> with <strong>ArcGIS mapping</strong> for targeted student voter outreach.
+            Sequence modeling for maritime AIS using <strong>GeoHash tokenization</strong> and a compact <strong>NanoGPT</strong> configuration for constrained hardware. 
+            Custom vocabulary design tackles sparsity and path drift while keeping memory bounded.
           </p>
-          <a href="images3/bluebonnet.png" target="_blank">
-            <img src="images3/bluebonnet.png" alt="Ben Massey House Campaign" class="project-img" />
-          </a>
-        </article>
-
-         <article class="project">
-          <h2>🌊 Hybrid LSTM & Physics-Informed Models for Hydrological Forecasting</h2>
-          <p>
-            Enhanced <strong>streamflow and snowmelt forecasting</strong> by integrating <strong>physics-informed features</strong> into deep learning models. 
-            Trained <strong>hybrid LSTM architectures</strong> with infiltration, saturation, and evapotranspiration inputs on <strong>Russian River (Calpella)</strong> data. 
-            Conducted <strong>grid search on Savio HPC (UC Berkeley)</strong> using ipyparallel to optimize NSE and generalization performance. 
-            Collaboration with the <strong>Environmental Systems Dynamics Lab (UCB)</strong> for basin-scale model evaluation and interpretability.
-          </p>
+          <ul>
+            <li>Tokenizer balances spatial resolution and sequence length</li>
+            <li>Curriculum schedule reduces early collapse on rare routes</li>
+            <li>Offline evaluation on held-out trajectories with realistic gaps</li>
+          </ul>
+          <a href="images3/CDSS.png" target="_blank"><img src="images3/CDSS.png" alt="Vessel Trajectory Forecasting Poster" class="project-img" /></a>
         </article>
 
         <article class="project">
-          <h2>🫀 Neural Temporal Point Process for Ectopic Beat Detection</h2>
+          <h2>🧭 Student Voter Identification and Outreach Analytics</h2>
           <p>
-            Developed a <strong>neural temporal point process (nTPP)</strong> that extends Barbieri’s inverse-Gaussian heartbeat model 
-            with a <strong>mixture-of-lognormals likelihood</strong> and <strong>GRU-based parameter dynamics</strong>. 
-            Implemented <strong>multi-hypothesis detection</strong> (extra, missed, misplaced, and resetting beats) using Fenton–Wilkinson 
-            moment-matching for threshold calibration. Conducted cross-validation on time-series to improve detection precision in noisy physiological data. Evaluated on <strong>UCSF–UCB Computational Precision Health</strong> datasets.
+            Integrated registrar records, VAN exports, and public voter files with <strong>SQL</strong> and <strong>fuzzy matching</strong>. 
+            Built a <strong>Tableau + ArcGIS</strong> dashboard for geo-targeted outreach in a college-heavy district.
           </p>
+          <ul>
+            <li>Automated <strong>PDF to CSV</strong> conversion to bypass export quotas</li>
+            <li>Deduplication and conflict resolution with deterministic keys</li>
+            <li>Segment-level maps for actionable field operations</li>
+          </ul>
+          <a href="images3/bluebonnet.png" target="_blank"><img src="images3/bluebonnet.png" alt="Ben Massey House Campaign" class="project-img" /></a>
         </article>
 
         <article class="project">
-          <h2>🧬 CNN-Based Detection of Macular Degeneration</h2>
+          <h2>🌊 Physics-Informed LSTM for Basin Hydrology</h2>
           <p>
-            Built a <strong>CNN to detect age-related macular degeneration</strong> from retinal images. 
-            Implemented preprocessing (normalization, augmentation, artifact removal) for robustness. 
-            Leveraged <strong>transfer learning (ResNet, EfficientNet)</strong> and addressed class imbalance using weighted loss and oversampling. 
-            Collaborated with <strong>University of Cambridge</strong> clinicians for clinical interpretability. 
-            Built using <strong>TensorFlow/Keras</strong> and <strong>OpenCV</strong>.
+            Hybrid LSTM ensembles for <strong>streamflow and snowmelt</strong> on Russian River (Calpella) with <strong>physics-informed features</strong> 
+            like infiltration, saturation, and ET. Trained on Savio HPC with ipyparallel grid search for NSE optimization.
           </p>
+          <ul>
+            <li>Experiment orchestrator with YAML configs and checkpointing</li>
+            <li>Early stopping on rolling NSE and out-of-basin validation</li>
+            <li>Feature ablations to quantify physical signal contribution</li>
+          </ul>
         </article>
 
         <article class="project">
-          <h2>🌐 Impact Evaluations – World Bank & UC Berkeley Economics</h2>
+          <h2>🫀 Neural Temporal Point Process for Ectopy</h2>
           <p>
-            Assessed cognitive and non-cognitive effects of a <strong>youth chess intervention</strong> in rural <strong>Kenyan schools</strong> using 
-            <strong>difference-in-differences regression</strong>. 
-            Evaluated Brazil’s <strong>"Minha Casa, Minha Vida"</strong> housing program with a <strong>geolocation API</strong> to delineate 
-            boundaries for spatially-informed pre/post analyses of local economic outcomes.
+            Extended Barbieri’s inverse Gaussian heartbeat model with a <strong>mixture-of-lognormals likelihood</strong> and <strong>GRU dynamics</strong>. 
+            Implemented <strong>multi-hypothesis detection</strong> for extra, missed, misplaced, and resetting beats with Fenton–Wilkinson calibration.
           </p>
+          <ul>
+            <li>Sequence-to-parameters network for conditional inter-beat intervals</li>
+            <li>Cross-validated thresholds to control false alarms on noisy segments</li>
+            <li>Evaluation on UCSF–UCB CPH datasets with subject-wise splits</li>
+          </ul>
         </article>
 
         <article class="project">
-          <h2>📊 California Child Welfare Indicators Project (CCWIP)</h2>
+          <h2>🧬 Retinal AMD Detection with Transfer Learning</h2>
           <p>
-            <strong>Research Assistant</strong> 
-            <br>
-            Supporting the <strong>California Department of Social Services</strong> through <strong>interactive data tools and dashboards</strong> 
-            for county-level child welfare analysis. 
-            Building <strong>automated pipelines</strong> and visualization workflows for evidence-based decision-making 
-            on <strong>child safety, placement, and permanency metrics</strong>.
+            CNN classifier for age-related macular degeneration using <strong>ResNet and EfficientNet</strong> backbones. 
+            Preprocessing pipeline includes normalization, artifact cleanup, augmentation, and class-imbalance handling.
           </p>
+          <ul>
+            <li>Weighted loss and stratified sampling for minority classes</li>
+            <li>Grad-CAM sanity checks for clinical interpretability</li>
+            <li>Training reproducibility with fixed seeds and versioned datasets</li>
+          </ul>
         </article>
 
         <article class="project">
-          <h2>Women and Incarceration Project</h2>
+          <h2>🌐 Impact Evaluations in Education and Housing</h2>
           <p>
-            <strong>Policy Research Intern</strong> 
-            <br>
-            Worked with the <strong>Center for Women’s Health & Human Rights</strong> at <strong>Suffolk University</strong> to analyze 
-            datasets on <strong>incarceration, gender, and healthcare access</strong>. 
-            Produced <strong>policy briefs and data visualizations</strong> highlighting systemic inequities in sentencing 
-            and health outcomes for incarcerated women.
+            Difference-in-differences for a <strong>youth chess intervention</strong> in rural Kenya, plus spatially-aware analysis of Brazil’s 
+            <strong>Minha Casa, Minha Vida</strong> housing program using geolocation boundaries for pre and post comparisons.
           </p>
+          <ul>
+            <li>Clean data layers with unit-level fixed effects and clustered SEs</li>
+            <li>Event-time plots and placebo tests for robustness</li>
+            <li>Reproducible codebook and pipeline for policy partners</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <h2>📊 California Child Welfare Indicators Project</h2>
+          <p>
+            Research engineering for CDSS with automated ingestion and visualization of county-level child welfare outcomes. 
+            Focus on traceable transformations and consistent metric definitions across time.
+          </p>
+          <ul>
+            <li>ETL that normalizes schema drift and late-arriving records</li>
+            <li>Interactive dashboards for safety, placement, permanency</li>
+            <li>Data quality checks with audit logs and assertions</li>
+          </ul>
         </article>
 
       </section>
     </main>
 
-    <h1 data-text="selected coursework">selected coursework</h1>
+    <h1>selected coursework</h1>
     <p>
       <strong>computer science:</strong> Data Structures & Algorithms · Operating Systems · Computer Architecture · Machine Learning · Digital Design · Integrated Circuits · Signal Processing · Communication Networks · Microelectronic Devices<br><br>
       <strong>mathematics:</strong> Optimization · Linear Algebra · Discrete Math · Logic · Stochastic Processes · Real Analysis · Complex Analysis · Abstract Algebra · Combinatorics<br><br>
       <strong>statistics & economics:</strong> Statistical Learning & Data Science · Causal Inference · Time Series Analysis · Econometrics · Algorithmic Economics · Public Economics · Behavioral Economics · Financial Econometrics · Industrial Organization
     </p>
 
-      <p style="text-align: center; font-size: 0.9rem; color: #999; margin-top: 4em;">
-  made with ☕️ and 🐛s.<br />© 2025 ananya dua. all rights reserved.
-</p>
+    <footer>
+      made with ☕️ and 🐛s<br>© 2025 ananya dua
+    </footer>
   </div>
 </body>
 </html>
