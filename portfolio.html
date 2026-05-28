@@ -169,7 +169,6 @@
         <a href="research.html">/research 🔬</a>
         <a href="portfolio.html">/portfolio 💻</a>
         <a href="travel.html">/travel ✈️</a>
-        <a href="bookshelf.html">/blog 🖋️</a>
       </nav>
     </header>
 
@@ -227,15 +226,28 @@
         </section>
 
         <section class="project-card">
-          <h2>NoteNest</h2>
-          <p>Cross-platform note-taking system with AI summarization and real-time synchronization. Designed for scalability, offline-first usage, and adaptive retrieval across devices.</p>
-          <ul class="tech-bullets">
-            <li><strong>Frontend:</strong> React + Vite interface with modular state management</li>
-            <li><strong>Backend:</strong> Node.js + Express API with WebSocket sync</li>
-            <li><strong>AI Integration:</strong> Gemini-based note summarization</li>
-            <li><strong>Database:</strong> MongoDB + Mongoose models</li>
-          </ul>
-        </section>
+        <h2>Shazam-CPP</h2>
+        <p>C++17 audio fingerprinting engine implementing the Wang 2003 “Industrial-Strength Audio Search” algorithm used in Shazam-style song recognition. Identifies songs from short noisy clips in sub-second latency using FFT-based spectrogram analysis and combinatorial hashing.</p>
+        <ul class="tech-bullets">
+          <li><strong>Digital Signal Processing:</strong> Custom Cooley–Tukey radix-2 FFT + STFT spectrogram pipeline</li>
+          <li><strong>Fingerprinting:</strong> Constellation-map peak extraction with combinatorial hash generation</li>
+          <li><strong>Search:</strong> SQLite-backed offset histogram matching for noise-robust identification</li>
+          <li><strong>Performance:</strong> ~380 ms query latency for 5-second clips against large fingerprint datasets</li>
+        </ul>
+        <a href="https://github.com/ananyadua27/shazam-cpp" target="_blank">View on GitHub ↗</a>
+      </section>
+
+      <section class="project-card">
+        <h2>Distributed-KV</h2>
+        <p>Rust-based distributed key-value store exploring storage-engine internals and fault-tolerant distributed systems design. Implements durable persistence primitives alongside a deterministic network simulator for reproducible failure testing.</p>
+        <ul class="tech-bullets">
+          <li><strong>Storage:</strong> WAL-backed MemTable + immutable SSTable architecture</li>
+          <li><strong>Recovery:</strong> Crash-safe WAL replay and tombstone-based delete semantics</li>
+          <li><strong>Distributed Systems:</strong> Virtual-node consistent hash ring with replica selection</li>
+          <li><strong>Testing:</strong> Seeded simulator supporting partitions, drops, delays, reordering, and crashes</li>
+        </ul>
+        <a href="https://github.com/ananyadua27/distributed-kv" target="_blank">View on GitHub ↗</a>
+      </section>
 
         <section class="project-card">
           <h2>WordNet Temporal Explorer</h2>
@@ -250,7 +262,7 @@
 
       <h1>technical skills</h1>
       <p>
-        <strong>programming:</strong> Python · Java · JavaScript · TypeScript · Go · SQL · C · C++ · R · HTML · CSS · LaTeX<br><br>
+        <strong>programming:</strong> Python · Java · JavaScript · TypeScript · Go · Rust · SQL · C · C++ · R <br><br>
         <strong>frameworks:</strong> React · Next.js · Node.js · Express · TensorFlow · PyTorch · LangGraph · FastAPI · pytest<br><br>
         <strong>technologies:</strong> Git · GCP · AWS · Firebase · GraphQL · Redis · MongoDB · PostgreSQL · Docker · OpenCV<br><br>
         <strong>devops:</strong> GitHub Actions · CI/CD · Docker Compose · Vercel · Railway
@@ -258,8 +270,9 @@
     </main>
 
     <footer>
-      made with ☕️ and 🐛s<br>© 2025 ananya dua
+      made with ☕️ and 🐛s<br>© <span data-current-year>2026</span> ananya dua
     </footer>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>

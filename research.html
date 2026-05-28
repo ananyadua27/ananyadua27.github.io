@@ -175,7 +175,6 @@
         <a href="research.html">/research 🔬</a>
         <a href="portfolio.html">/portfolio 💻</a>
         <a href="travel.html">/travel ✈️</a>
-        <a href="bookshelf.html">/blog 🖋️</a>
       </nav>
     </header>
 
@@ -215,6 +214,36 @@
         </article>
 
         <article class="project">
+          <h2>⚡ Dual-State Marked Point Process for EDA</h2>
+          <p>
+            Developed a <strong>continuous-time probabilistic model</strong> for electrodermal activity that separates 
+            latent <strong>impulse rate</strong> and <strong>amplitude</strong> dynamics into coupled physiological states. 
+            Extended classical marked point process approaches with <strong>Log-Normal marks</strong>, 
+            <strong>Inverse Gaussian inter-arrival modeling</strong>, and nonlinear state-space inference.
+          </p>
+          <ul>
+            <li>Implemented <strong>Newton-Raphson EKF + RTS smoothing</strong> for latent-state estimation</li>
+            <li>Designed an <strong>augmented-state EKF</strong> for joint timing and amplitude inference</li>
+            <li>EM-based learning with stability-constrained continuous-time dynamics</li>
+          </ul>
+          <a href="images3/ntpp.png" target="_blank"><img src="images3/ntpp.png" alt="NTPP" class="project-img" /></a>
+        </article>
+
+        <article class="project">
+          <h2>🫀 Neural Temporal Point Process for Ectopy</h2>
+          <p>
+            Extended Barbieri’s inverse Gaussian heartbeat model with a <strong>mixture-of-lognormals likelihood</strong> and <strong>GRU dynamics</strong>. 
+            Implemented <strong>multi-hypothesis detection</strong> for extra, missed, misplaced, and resetting beats with Fenton–Wilkinson calibration.
+            Presented at <strong>UCSF AI Day '26</strong> and <strong>CPH Frontiers '26</strong>.
+          </p>
+          <ul>
+            <li>Sequence-to-parameters network for conditional inter-beat intervals</li>
+            <li>Cross-validated thresholds to control false alarms on noisy segments</li>
+          </ul>
+          <a href="images3/ntpp.png" target="_blank"><img src="images3/ntpp.png" alt="NTPP" class="project-img" /></a>
+        </article>
+
+        <article class="project">
           <h2>🛰️ AIS Vessel Trajectory Forecasting with NanoGPT</h2>
           <p>
             Sequence modeling for maritime AIS using <strong>GeoHash tokenization</strong> and a compact <strong>NanoGPT</strong> configuration for constrained hardware. 
@@ -226,20 +255,6 @@
             <li>Offline evaluation on held-out trajectories with realistic gaps</li>
           </ul>
           <a href="images3/CDSS.png" target="_blank"><img src="images3/CDSS.png" alt="Vessel Trajectory Forecasting Poster" class="project-img" /></a>
-        </article>
-
-        <article class="project">
-          <h2>🧭 Student Voter Identification and Outreach Analytics</h2>
-          <p>
-            Integrated registrar records, VAN exports, and public voter files with <strong>SQL</strong> and <strong>fuzzy matching</strong>. 
-            Built a <strong>Tableau + ArcGIS</strong> dashboard for geo-targeted outreach in a college-heavy district.
-          </p>
-          <ul>
-            <li>Automated <strong>PDF to CSV</strong> conversion to bypass export quotas</li>
-            <li>Deduplication and conflict resolution with deterministic keys</li>
-            <li>Segment-level maps for actionable field operations</li>
-          </ul>
-          <a href="images3/bluebonnet.png" target="_blank"><img src="images3/bluebonnet.png" alt="Ben Massey House Campaign" class="project-img" /></a>
         </article>
 
         <article class="project">
@@ -256,17 +271,18 @@
           <a href="images3/russianriver.png" target="_blank"><img src="images3/russianriver.png" alt="calpella" class="project-img" /></a>
         </article>
 
-        <article class="project">
-          <h2>🫀 Neural Temporal Point Process for Ectopy</h2>
+         <article class="project">
+          <h2>🧭 Student Voter Identification and Outreach Analytics</h2>
           <p>
-            Extended Barbieri’s inverse Gaussian heartbeat model with a <strong>mixture-of-lognormals likelihood</strong> and <strong>GRU dynamics</strong>. 
-            Implemented <strong>multi-hypothesis detection</strong> for extra, missed, misplaced, and resetting beats with Fenton–Wilkinson calibration.
+            Integrated registrar records, VAN exports, and public voter files with <strong>SQL</strong> and <strong>fuzzy matching</strong>. 
+            Built a <strong>Tableau + ArcGIS</strong> dashboard for geo-targeted outreach in a college-heavy district.
           </p>
           <ul>
-            <li>Sequence-to-parameters network for conditional inter-beat intervals</li>
-            <li>Cross-validated thresholds to control false alarms on noisy segments</li>
+            <li>Automated <strong>PDF to CSV</strong> conversion to bypass export quotas</li>
+            <li>Deduplication and conflict resolution with deterministic keys</li>
+            <li>Segment-level maps for actionable field operations</li>
           </ul>
-          <a href="images3/ntpp.png" target="_blank"><img src="images3/ntpp.png" alt="NTPP" class="project-img" /></a>
+          <a href="images3/bluebonnet.png" target="_blank"><img src="images3/bluebonnet.png" alt="Ben Massey House Campaign" class="project-img" /></a>
         </article>
 
         <article class="project">
@@ -312,14 +328,15 @@
 
     <h1>selected coursework</h1>
     <p>
-      <strong>computer science:</strong> Data Structures & Algorithms · Operating Systems · Computer Architecture · Machine Learning · Digital Design · Integrated Circuits · Signal Processing · Communication Networks · Microelectronic Devices<br><br>
+      <strong>computer science:</strong> Data Structures & Algorithms · Operating Systems · Computer Architecture · Machine Learning · Digital Design · Integrated Circuits · Signal Processing · Communication Networks<br><br>
       <strong>mathematics:</strong> Optimization · Linear Algebra · Discrete Math · Logic · Stochastic Processes · Real Analysis · Complex Analysis · Abstract Algebra · Combinatorics · Differential Topology <br><br>
       <strong>statistics & economics:</strong> Statistical Learning & Data Science · Causal Inference · Time Series Analysis · Econometrics · Algorithmic Economics · Public Economics · Behavioral Economics · Industrial Organization
     </p>
 
     <footer>
-      made with ☕️ and 🐛s<br>© 2025 ananya dua
+      made with ☕️ and 🐛s<br>© <span data-current-year>2026</span> ananya dua
     </footer>
   </div>
+  <script src="index.js"></script>
 </body>
 </html>
