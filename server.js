@@ -13,6 +13,7 @@ app.use('/images5', express.static(path.join(__dirname, 'images5')));
 app.use('/images6', express.static(path.join(__dirname, 'images6')));
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/index.html', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 app.get('/research.html', (req, res) => res.sendFile(path.join(__dirname, 'research.html')));
 app.get('/portfolio.html', (req, res) => res.sendFile(path.join(__dirname, 'portfolio.html')));
 app.get('/travel.html', (req, res) => res.sendFile(path.join(__dirname, 'travel.html')));

@@ -209,7 +209,11 @@
             <li>Implemented subject-specific empirical copula prediction from accelerometer-only inputs using rank normalization, conditional ECDFs, and inverse marginals</li>
             <li>Built evaluation tooling for Spearman rho, mean directional accuracy, log-likelihood, baseline comparisons, and contour-based model diagnostics</li>
           </ul>
-          <a href="images3/EMBC.png" target="_blank"><img src="images3/EMBC.png" alt="Heart Rate Prediction Poster" class="project-img" /></a>
+          <a href="images3/paper.pdf" target="_blank">
+          <div style="position: relative; width: 100%; padding-top: 130%; overflow: hidden; border-radius: 4px; margin-top: 1rem;">
+            <iframe src="images3/paper.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; pointer-events: none;"></iframe>
+          </div>
+        </a>
         </article>
 
         <article class="project">
@@ -225,7 +229,11 @@
             <li>Designed an augmented-state EKF for joint timing and amplitude inference</li>
             <li>EM-based learning with stability-constrained continuous-time dynamics</li>
           </ul>
-          <a href="images3/ntpp.png" target="_blank"><img src="images3/ntpp.png" alt="NTPP" class="project-img" /></a>
+          <a href="images3/eda_modeling.pdf" target="_blank">
+          <div style="position: relative; width: 100%; padding-top: 130%; overflow: hidden; border-radius: 4px; margin-top: 1rem;">
+            <iframe src="images3/eda_modeling.pdf" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; pointer-events: none;"></iframe>
+          </div>
+        </a>
         </article>
 
         <article class="project">
@@ -240,7 +248,7 @@
             <li>Implemented probabilistic inference over extra, missed, misplaced, and resetting beat hypotheses to score candidate ectopy events under uncertainty</li>
             <li>Developed threshold-sweep, cross-validation, and diagnostic visualization tooling to tune false-alarm control on noisy physiological signals</li>
           </ul>
-          <a href="images3/ntpp.png" target="_blank"><img src="images3/ntpp.png" alt="NTPP" class="project-img" /></a>
+          <a href="images3/CPH-Poster-2026.png" target="_blank"><img src="images3/CPH-Poster-2026.png" alt="NTPP" class="project-img" /></a>
         </article>
 
         <article class="project">
@@ -258,18 +266,21 @@
         </article>
 
         <article class="project">
-          <h2>🌊 Physics-Informed LSTM for Basin Hydrology</h2>
-          <p>
-            Hybrid LSTM ensembles for streamflow and snowmelt on Russian River (Calpella) with physics-informed features 
-            like infiltration, saturation, and ET. Trained on Savio HPC with ipyparallel grid search for NSE optimization.
-          </p>
-          <ul>
-            <li>Built a YAML-driven experiment runner for distributed Savio jobs with checkpointing and resumable hyperparameter sweeps</li>
-            <li>Implemented rolling NSE validation, early stopping, and out-of-basin evaluation to prevent overfit hydrology forecasts</li>
-            <li>Designed feature-ablation pipelines to quantify the predictive lift from physically grounded covariates</li>
-          </ul>
-          <a href="images3/russianriver.png" target="_blank"><img src="images3/russianriver.png" alt="calpella" class="project-img" /></a>
-        </article>
+        <h2>🌊 Physics-Informed LSTM for Basin Hydrology</h2>
+        <p>
+          Physics-informed hybrid LSTM for streamflow and snowmelt forecasting across 
+          California basins, developed in collaboration with USACE and UC Berkeley's ESDL. 
+          Extended NeuralHydrology's PyTorch framework with custom architectures and 
+          distributed training on Savio HPC to improve out-of-sample generalizability 
+          under non-stationary climate conditions.
+        </p>
+        <ul>
+          <li>Built a YAML-driven experiment runner for distributed Savio jobs with ipyparallel grid search, checkpointing, and resumable hyperparameter sweeps across LSTM depth, hidden size, and dropout configurations</li>
+          <li>Implemented rolling NSE validation, early stopping, and out-of-basin transfer evaluation to benchmark generalizability across watersheds with sparse observational data</li>
+          <li>Designed feature-ablation pipelines to quantify predictive lift from physics-informed inputs (infiltration, ET, saturation excess) over purely data-driven baselines</li>
+        </ul>
+        <a href="images3/russianriver.png" target="_blank"><img src="images3/russianriver.png" alt="calpella" class="project-img" /></a>
+      </article>
 
          <article class="project">
           <h2>🧭 Student Voter Identification and Outreach Analytics</h2>
