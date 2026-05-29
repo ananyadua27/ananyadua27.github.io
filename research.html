@@ -77,6 +77,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 2rem;
+      align-items: start;
       margin: 3rem 0;
     }
 
@@ -117,6 +118,20 @@
     .project li {
       margin-bottom: 0.5rem;
       color: rgba(255,255,255,0.75);
+    }
+
+    .project.compact {
+      align-self: start;
+      padding: 1.6rem;
+    }
+
+    .project.compact p {
+      line-height: 1.6;
+      margin-bottom: 0.75rem;
+    }
+
+    .project.compact li {
+      margin-bottom: 0.35rem;
     }
 
     .project strong {
@@ -191,9 +206,9 @@
             Proposed CSMA/CA tuning strategies to stabilize QoS under congestion.
           </p>
           <ul>
-            <li>Scenario generator for bursty and periodic traffic profiles</li>
-            <li>Reproducible runs with seeded channels and mobility models</li>
-            <li>Metrics export to Parquet for downstream analysis</li>
+            <li>Built a custom DevicePlacer-based grid setup to scale STA counts across six WLAN simulations with fixed AP placement</li>
+            <li>Automated networkTrafficOnOff uplink/downlink traffic profiles and CWmin sweeps at 150, 350, and 550 time slots</li>
+            <li>Instrumented per-user throughput, PHY drop-based packet loss, and AP/STA latency metrics to identify congestion thresholds</li>
           </ul>
           <a href="images3/EE122.png" target="_blank"><img src="images3/EE122.png" alt="Wireless Congestion Simulation Poster" class="project-img" /></a>
         </article>
@@ -201,14 +216,13 @@
         <article class="project">
           <h2>🧠 Contactless HR Prediction with Copula Models</h2>
           <p>
-            Sleep-phase heart rate prediction from Apple Watch tri-axial accelerometry using a nonparametric copula to capture 
-            motion–HR dependence. Personalized models outperform subject-agnostic baselines in held-out subjects. 
-            Presented at IEEE EMBC and CPH Frontiers.
+            First-author IEEE EMBC '25 paper on predicting overnight heart-rate trajectories from triaxial accelerometry using 
+            a nonparametric copula with Tll2nn local log-quadratic likelihood estimation. Presented at UCSF CPH Frontiers '25.
           </p>
           <ul>
-            <li>Pipeline includes denoising, segmentation, covariate normalization</li>
-            <li>Cross-validated hyperparameters, per-subject calibration</li>
-            <li>Robustness checks for motion artifacts and missingness</li>
+            <li>Engineered a biosignal pipeline with sleep-stage filtering, PCA motion features, outlier removal, and smoothing</li>
+            <li>Implemented subject-specific empirical copula prediction from accelerometer-only inputs using rank normalization, conditional ECDFs, and inverse marginals</li>
+            <li>Built evaluation tooling for Spearman rho, mean directional accuracy, log-likelihood, baseline comparisons, and contour-based model diagnostics</li>
           </ul>
           <a href="images3/EMBC.png" target="_blank"><img src="images3/EMBC.png" alt="Heart Rate Prediction Poster" class="project-img" /></a>
         </article>
@@ -232,13 +246,14 @@
         <article class="project">
           <h2>🫀 Neural Temporal Point Process for Ectopy</h2>
           <p>
-            Extended Barbieri’s inverse Gaussian heartbeat model with a mixture-of-lognormals likelihood and GRU dynamics. 
-            Implemented multi-hypothesis detection for extra, missed, misplaced, and resetting beats with Fenton–Wilkinson calibration.
-            Presented at UCSF AI Day '26 and CPH Frontiers '26.
+            Pending IEEE TBME journal publication on neural temporal point process modeling for ectopic heartbeat detection from irregular 
+            beat-to-beat interval streams. Extended Barbieri’s inverse Gaussian heartbeat model with GRU-conditioned mixture likelihoods, 
+            multi-hypothesis beat inference, and Fenton-Wilkinson calibration; presented at UCSF AI Day '26.
           </p>
           <ul>
-            <li>Sequence-to-parameters network for conditional inter-beat intervals</li>
-            <li>Cross-validated thresholds to control false alarms on noisy segments</li>
+            <li>Built an end-to-end sequence modeling pipeline for heartbeat interval preprocessing, temporal windowing, batched training, and reproducible evaluation</li>
+            <li>Implemented probabilistic inference over extra, missed, misplaced, and resetting beat hypotheses to score candidate ectopy events under uncertainty</li>
+            <li>Developed threshold-sweep, cross-validation, and diagnostic visualization tooling to tune false-alarm control on noisy physiological signals</li>
           </ul>
           <a href="images3/ntpp.png" target="_blank"><img src="images3/ntpp.png" alt="NTPP" class="project-img" /></a>
         </article>
@@ -246,13 +261,13 @@
         <article class="project">
           <h2>🛰️ AIS Vessel Trajectory Forecasting with NanoGPT</h2>
           <p>
-            Sequence modeling for maritime AIS using GeoHash tokenization and a compact NanoGPT configuration for constrained hardware. 
-            Custom vocabulary design tackles sparsity and path drift while keeping memory bounded.
+            Feasibility study applying language-model tooling to fixed-gear fishing vessel trajectory forecasting from timestamped AIS geolocation data. 
+            Built a geohash-based tokenization and nanoGPT training pipeline to model vessel movement as discrete spatiotemporal sequences under limited compute.
           </p>
           <ul>
-            <li>Tokenizer balances spatial resolution and sequence length</li>
-            <li>Curriculum schedule reduces early collapse on rare routes</li>
-            <li>Offline evaluation on held-out trajectories with realistic gaps</li>
+            <li>Implemented AIS preprocessing with missing-data analysis, trajectory resampling, and centralized cloud-hosted data access for team workflows</li>
+            <li>Designed a custom geospatial tokenizer that converts latitude/longitude tracks into base32 geohash tokens with tunable spatial precision</li>
+            <li>Modified nanoGPT with a geospatial encoder and track-aware data loader that batches contiguous trajectory windows for next-token forecasting experiments</li>
           </ul>
           <a href="images3/CDSS.png" target="_blank"><img src="images3/CDSS.png" alt="Vessel Trajectory Forecasting Poster" class="project-img" /></a>
         </article>
@@ -264,49 +279,48 @@
             like infiltration, saturation, and ET. Trained on Savio HPC with ipyparallel grid search for NSE optimization.
           </p>
           <ul>
-            <li>Experiment orchestrator with YAML configs and checkpointing</li>
-            <li>Early stopping on rolling NSE and out-of-basin validation</li>
-            <li>Feature ablations to quantify physical signal contribution</li>
+            <li>Built a YAML-driven experiment runner for distributed Savio jobs with checkpointing and resumable hyperparameter sweeps</li>
+            <li>Implemented rolling NSE validation, early stopping, and out-of-basin evaluation to prevent overfit hydrology forecasts</li>
+            <li>Designed feature-ablation pipelines to quantify the predictive lift from physically grounded covariates</li>
           </ul>
           <a href="images3/russianriver.png" target="_blank"><img src="images3/russianriver.png" alt="calpella" class="project-img" /></a>
         </article>
 
-         <article class="project">
+         <article class="project compact">
           <h2>🧭 Student Voter Identification and Outreach Analytics</h2>
           <p>
-            Integrated registrar records, VAN exports, and public voter files with SQL and fuzzy matching. 
-            Built a Tableau + ArcGIS dashboard for geo-targeted outreach in a college-heavy district.
+            Built a campaign analytics and field-operations data system for a college-heavy district, joining registrar records, VAN exports, 
+            and public voter files with SQL, deterministic entity resolution, and fuzzy matching. Produced Tableau and ArcGIS dashboards for student-segment outreach.
           </p>
           <ul>
-            <li>Automated PDF to CSV conversion to bypass export quotas</li>
-            <li>Deduplication and conflict resolution with deterministic keys</li>
-            <li>Segment-level maps for actionable field operations</li>
+            <li>Designed a Postgres-backed ingestion workflow that converted quota-limited PDF exports into normalized relational tables</li>
+            <li>Implemented deduplication and conflict resolution across inconsistent voter records</li>
+            <li>Generated geospatial layers and outreach lists for precinct-level field operations</li>
           </ul>
-          <a href="images3/bluebonnet.png" target="_blank"><img src="images3/bluebonnet.png" alt="Ben Massey House Campaign" class="project-img" /></a>
         </article>
 
-        <article class="project">
+        <article class="project compact">
           <h2>🌐 Impact Evaluations in Education and Housing</h2>
           <p>
             Difference-in-differences for a youth chess intervention in rural Kenya, plus spatially-aware analysis of Brazil’s 
             Minha Casa, Minha Vida housing program using geolocation boundaries for pre and post comparisons.
           </p>
           <ul>
-            <li>Clean data layers with unit-level fixed effects and clustered SEs</li>
-            <li>Event-time plots and placebo tests for robustness</li>
-            <li>Reproducible codebook and pipeline for policy partners</li>
+            <li>Built reproducible panel-data pipelines with geospatial joins, unit fixed effects, and clustered standard errors</li>
+            <li>Automated event-study plots, placebo tests, and robustness checks for causal-inference workflows</li>
+            <li>Packaged codebooks and analysis outputs for nontechnical policy partners to audit and reuse</li>
           </ul>
         </article>
 
-        <article class="project">
+        <article class="project compact">
           <h2>📊 California Child Welfare Indicators Project</h2>
           <p>
             Research engineering for CDSS with automated ingestion and visualization of county-level child welfare outcomes. 
             Focus on traceable transformations and consistent metric definitions across time.
           </p>
           <ul>
-            <li>Interactive dashboards for safety, placement, permanency</li>
-            <li>Data quality checks with audit logs and assertions</li>
+            <li>Automated county-level metric ingestion and dashboard refreshes for safety, placement, and permanency indicators</li>
+            <li>Implemented data quality checks, audit logs, and validation assertions to catch inconsistent longitudinal records</li>
           </ul>
         </article>
 

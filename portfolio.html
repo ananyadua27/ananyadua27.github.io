@@ -182,9 +182,9 @@
           <p>End-to-end automation tool for GitHub repositories that classifies and labels PRs/issues using fine-tuned NLP models. Integrated dashboard provides real-time activity visualization and CI/CD deployment analytics.</p>
           <ul class="tech-bullets">
             <li><strong>Stack:</strong> TypeScript · Express · MongoDB · Docker · GitHub Actions</li>
-            <li><strong>Automation:</strong> Webhook listener triggers rule-based + ML pipelines</li>
-            <li><strong>Inference:</strong> Zero-shot classification via Hugging Face APIs</li>
-            <li><strong>Monitoring:</strong> Live EJS dashboard with query filters and metrics</li>
+            <li><strong>Automation:</strong> Event-driven webhook service routes issues and PRs through rule-based + ML labeling pipelines</li>
+            <li><strong>Inference:</strong> Hugging Face zero-shot classifier with configurable label taxonomies and fallback rules</li>
+            <li><strong>Monitoring:</strong> EJS operations dashboard with query filters, activity metrics, and CI/CD deployment visibility</li>
           </ul>
           <a href="https://github.com/ananyadua27/GitHub-issue-labeler-bot" target="_blank">View on GitHub ↗</a>
         </section>
@@ -194,9 +194,9 @@
           <p>Chrome extension enhancing Goodreads with NLP-based sentiment analysis, library lookup, and visualization features. Designed for privacy-first, client-side inference with a clean, reactive UX.</p>
           <ul class="tech-bullets">
             <li><strong>Frontend:</strong> Vanilla JS + Plotly.js visualizations</li>
-            <li><strong>NLP:</strong> Lexicon-based sentiment classifier for reviews</li>
-            <li><strong>Integration:</strong> Open Library + WorldCat APIs via ZIP search</li>
-            <li><strong>Persistence:</strong> chrome.storage.sync for cached state</li>
+            <li><strong>NLP:</strong> Client-side sentiment pipeline for review scoring without sending reading data to a backend</li>
+            <li><strong>Integration:</strong> Open Library + WorldCat API adapters with ZIP-based local availability lookup</li>
+            <li><strong>Persistence:</strong> chrome.storage.sync cache layer for preferences, lookup state, and extension settings</li>
           </ul>
           <a href="https://github.com/ananyadua27/Goodreads-companion" target="_blank">View on GitHub ↗</a>
         </section>
@@ -206,9 +206,9 @@
           <p>Distributed FastAPI backend that uses LangGraph to parse and summarize academic preprints. Implements a multi-agent architecture for concurrent retrieval, summarization, and evaluation with fault-tolerant state recovery.</p>
           <ul class="tech-bullets">
             <li><strong>Stack:</strong> Python · FastAPI · Redis · LangGraph · T5-base</li>
-            <li><strong>Architecture:</strong> Asynchronous agent graph with retry handling</li>
-            <li><strong>Persistence:</strong> Redis session management for resumable jobs</li>
-            <li><strong>API:</strong> REST endpoints serving structured summaries</li>
+            <li><strong>Architecture:</strong> Async LangGraph workflow coordinating retrieval, summarization, evaluation, and retry paths</li>
+            <li><strong>Persistence:</strong> Redis-backed session state for resumable long-running preprint analysis jobs</li>
+            <li><strong>API:</strong> FastAPI endpoints returning typed, structured summaries for downstream clients</li>
           </ul>
           <a href="https://github.com/ananyadua27/arxiv-lang-graph" target="_blank">View on GitHub ↗</a>
         </section>
@@ -219,8 +219,8 @@
           <ul class="tech-bullets">
             <li><strong>Backend:</strong> Go (Gorilla WebSocket, Mutex-controlled state)</li>
             <li><strong>Frontend:</strong> JS + HTML5 Canvas for dynamic visualization</li>
-            <li><strong>Concurrency:</strong> Event-driven model with goroutines</li>
-            <li><strong>Deployment:</strong> Dockerized with CI workflows</li>
+            <li><strong>Concurrency:</strong> Goroutine-based simulation loop with mutex-protected shared state and WebSocket fanout</li>
+            <li><strong>Deployment:</strong> Dockerized service with CI workflows for repeatable builds</li>
           </ul>
           <a href="https://github.com/ananyadua27/game-of-life" target="_blank">View on GitHub ↗</a>
         </section>
